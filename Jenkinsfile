@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Clone') {
       steps {
-        git 'https://github.com/yourusername/dailyquote.git'
+        git 'https://github.com/Rams0510/dailyquote-devops.git'
       }
     }
 
