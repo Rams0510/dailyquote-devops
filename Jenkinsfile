@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/Rams0510/dailyquote-devops.git'
+                git branch: 'main', url: 'https://github.com/Rams0510/dailyquote-devops.git'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t dailyquote ./dailyquote'
+                sh 'docker build -t dailyquote .'
             }
         }
 
