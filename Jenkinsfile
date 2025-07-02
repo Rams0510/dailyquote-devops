@@ -8,18 +8,15 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
+        stage('Build') {
             steps {
-                sh 'docker build -t dailyquote .'
+                sh 'echo "Simulating build step..."'
             }
         }
 
-        stage('Run Container') {
+        stage('Deploy') {
             steps {
-                sh '''
-                    docker rm -f dailyquote || true
-                    docker run -d -p 8080:80 --name dailyquote dailyquote
-                '''
+                sh 'echo "Simulating deployment..."'
             }
         }
     }
